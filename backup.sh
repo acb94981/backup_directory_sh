@@ -26,5 +26,7 @@ then
         rmdir backup
         mkdir backup
         mv backup.zip backup
-    fi     
+    fi 
+else 
+    echo "ok! you are not make backup!"    
 fi
