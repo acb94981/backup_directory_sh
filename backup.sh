@@ -10,8 +10,8 @@ read once_answer
 
 if [ $once_answer = "3" ];then
     cat README.txt
-    read -p "restart bot ? " restart_bot_cat
-    if [  ];then
+    read -p "restart bot ? y/n " restart_bot_cat
+    if [ $restart_bot_cat = "y" ];then
         echo "Ok!"
         echo "restart bot....."
         sleep 0.5
