@@ -40,7 +40,7 @@ elif [ $once_answer = "1" ];then
     echo "ok! you are not make backup!"    
     fi
 elif [ $once_answer = "2" ];then
-    read -p "are sure about that ? y/n " once_answer_2
+    read -p "this number, force delete all files and directory!!! are you sure about that ? y/n " once_answer_2
     if [ $once_answer_2 = y ];then
         echo "Ok!"
         rm *
