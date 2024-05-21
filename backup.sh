@@ -1,8 +1,5 @@
 #! /bin/bash
 
-
-
-
 echo "
 1. backup
 2. format directory
