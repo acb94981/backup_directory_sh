@@ -9,12 +9,20 @@ echo "
 read once_answer
 
 if [ $once_answer = "3" ];then
-    read -p "your sure about that backup your file ? y/n " help_input
     cat README.txt
+    read -p "restart bot ? " restart_bot_cat
+    if [  ];then
+        echo "Ok!"
+        echo "restart bot....."
+        sleep 0.5
+        bash backup.sh
+    else
+        exit
+    fi
 elif [ $once_answer = "1" ];then
-    read -p "your sure about that backup your file ? y/n " answer
+    read -p "are you sure about that backup your file ? y/n " answer
     if [ "$answer" = "y" ]; then    
-        read -p "Do create your file to zip or rar ? zip/rar " answer2
+        read -p "Do like create your file to zip or rar ? zip/rar " answer2
         if [ "$answer2" = "zip" ]; then    
             mkdir backup
             cp * backup
@@ -47,6 +55,9 @@ elif [ $once_answer = "2" ];then
         rmdir *
     else
         echo "Ok!"
+        echo "restart bot....."
+        sleep 0.5
+        bash backup.sh
     fi
 elif [ $once_answer = "4" ];then
     # kill -INT 888
