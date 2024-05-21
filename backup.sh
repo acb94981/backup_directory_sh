@@ -4,8 +4,7 @@ echo "
 1. backup
 2. format directory
 3. help(README)
-4. 
-
+4. exit
 "
 read once_answer
 
@@ -49,6 +48,11 @@ elif [ $once_answer = "2" ];then
     else
         echo "Ok!"
     fi
+elif [ $once_answer = "4" ];then
+    # kill -INT 888
+    # Force kill
+    # kill -SIGINT
+    exit
 fi
 
 
